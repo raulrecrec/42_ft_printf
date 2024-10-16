@@ -1,4 +1,5 @@
 NAME	= ft_printf.a
+TEST    = test_program
 
 RM		= rm -f
 
@@ -10,7 +11,6 @@ SRCS	=					\
 		ft_printf.c 		\
 		ft_format.c			\
 		ft_putchar.c		\
-		ft_printf_s.c		\
 
 OBJS	= $(SRCS:.c=.o)
 
@@ -24,6 +24,9 @@ $(LIBFT):
 
 $(NAME): $(OBJS)
 		ar rcs $(NAME) $(OBJS)
+
+$(TEST): all main.c
+	$(CC) $(CFLAGS) $(LIBFT_INC) main.c -o $(TEST) $(NAME) $(LIBFT)
 
 %.o: %.c
 		$(CC) $(CFLAGS) $(LIBFT_INC) -c $< -o $@
