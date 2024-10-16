@@ -6,11 +6,11 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 19:02:41 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/15 19:04:26 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/16 14:08:33 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "ft_printf.h"
 
 int	ft_putchar(char c)
 {
