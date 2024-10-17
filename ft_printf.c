@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:59:25 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/16 19:51:16 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/17 13:14:34 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,12 +23,15 @@ int	ft_printf(const char *format, ...)
 	cont = 0;
 	while (format[i] != '\0')
 	{
-		if (format[i] != '%')
-			cont = cont + ft_putchar(format[i]);
+		if (format[i] == '%' && format[i + 1] != '\0')
+			ft_format(format[++i], aargs, &cont);
 		else
-			ft_format(format[i + 1], aargs, &cont);
+		{
+			ft_putchar_fd(format[i], 1);
+			cont++;
+		}
 		i++;
 	}
 	va_end(aargs);
-	return 0;
+	return (cont);
 }
