@@ -11,35 +11,29 @@ SRCS	=					\
 		ft_printf.c 		\
 		ft_format.c			\
 		ft_numlen.c			\
+		ft_putlnbr.c		\
+		ft_putlstr.c		\
+		ft_putlchar.c		\
 
 OBJS	= $(SRCS:.c=.o)
 
-LIBFT		= ../42_Libft/libft.a
-LIBFT_INC	= -I../42_Libft
-
-all:	$(LIBFT) $(NAME)
-
-$(LIBFT):
-		$(MAKE) -C ../42_Libft
+all: $(NAME)
 
 $(NAME): $(OBJS)
 		ar rcs $(NAME) $(OBJS)
 
 $(TEST): all main.c
-	$(CC) $(CFLAGS) $(LIBFT_INC) main.c -o $(TEST) $(NAME) $(LIBFT)
+	$(CC) $(CFLAGS) main.c -o $(TEST) $(NAME)
 
 %.o: %.c
-		$(CC) $(CFLAGS) $(LIBFT_INC) -c $< -o $@
+		$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
 		$(RM) $(OBJS)
-		$(MAKE) -C ../42_Libft clean
 
 fclean: clean
 		$(RM) $(NAME)
-		$(MAKE) -C ../42_Libft fclean
 
 re: fclean all
 
 .PHONY: clean all fclean re
-
