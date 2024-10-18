@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:59:25 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/17 13:14:34 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/18 19:47:07 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,20 @@
 int	ft_printf(const char *format, ...)
 {
 	va_list	aargs;
-	int		cont;
+	int		printed_chars;
 	size_t	i;
 	
 	va_start(aargs, format);
 	i = 0;
-	cont = 0;
+	printed_chars = 0;
 	while (format[i] != '\0')
 	{
 		if (format[i] == '%' && format[i + 1] != '\0')
-			ft_format(format[++i], aargs, &cont);
+			printed_chars += ft_format(format[++i], aargs);
 		else
-		{
-			ft_putchar_fd(format[i], 1);
-			cont++;
-		}
+			printed_chars += ft_putlchar(format[i]);
 		i++;
 	}
 	va_end(aargs);
-	return (cont);
+	return (printed_chars);
 }
