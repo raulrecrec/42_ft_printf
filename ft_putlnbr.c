@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 17:49:59 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/18 19:14:40 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/21 18:38:08 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ void	ft_putnbr(int n)
 		divider = divider / 10;
 	}
 }
+
 int	ft_putlnbr(int n)
 {
 	ft_putnbr(n);

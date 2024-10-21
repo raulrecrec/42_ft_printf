@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 14:59:25 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/18 19:47:07 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/21 18:37:30 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int	ft_printf(const char *format, ...)
 	va_list	aargs;
 	int		printed_chars;
 	size_t	i;
-	
+
 	va_start(aargs, format);
 	i = 0;
 	printed_chars = 0;

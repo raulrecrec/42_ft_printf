@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/18 17:54:30 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/18 19:12:37 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/21 18:38:24 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_putlstr(char *s)
 {
-	size_t len;
+	size_t	len;
 
 	len = 0;
 	if (s == NULL)

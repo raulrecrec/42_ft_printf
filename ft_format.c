@@ -6,12 +6,12 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 19:07:09 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/18 19:44:20 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/21 18:36:58 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
-#include <stdio.h>
+
 int	ft_format(const char c, va_list value)
 {
 	int	printed_chars;
