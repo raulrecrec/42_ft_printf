@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:54:34 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/18 20:16:29 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/22 18:40:20 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,10 @@ int main(void)
     cont = ft_printf("Caracter: %c\n", 'A');
 	printf("%d\n", cont);
     cont = ft_printf("El número es: %i\n", 423);
+	printf("%d\n", cont);
+    cont = ft_printf("El número hex es: %x\n", 255);
+	printf("%d\n", cont);
+    cont = ft_printf("El número hex es: %X\n", 255);
 	printf("%d\n\nPRINTF ORIGINAL:\n\n", cont);
 
 	cont = printf("String: %s\n", a);
@@ -32,6 +36,10 @@ int main(void)
     cont = printf("Caracter: %c\n", 'A');
 	printf("%d\n", cont);
     cont = printf("El número es: %i\n", 423);
+	printf("%d\n", cont);
+    cont = printf("El número hex es: %x\n", 255);
+	printf("%d\n", cont);
+    cont = printf("El número hex es: %X\n", 255);
 	printf("%d\n", cont);
     return 0;
 }
