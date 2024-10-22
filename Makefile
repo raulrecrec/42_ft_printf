@@ -14,7 +14,8 @@ SRCS	=					\
 		ft_putlnbr.c		\
 		ft_putlstr.c		\
 		ft_putlchar.c		\
-
+		ft_putlnbr_base.c	\
+		
 OBJS	= $(SRCS:.c=.o)
 
 all: $(NAME)
