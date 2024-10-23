@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/16 18:54:34 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/23 13:44:58 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:14:29 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,10 @@
 #include <stdio.h>
 int main(void)
 {
-	int cont;
-	char *a = "Hola, mundo!";
+	int		cont;
+	char	*a = "Hola, mundo!";
+	int		b = 42;
+	void	*ptr = &b;
     cont = ft_printf("String: %s\n", a);
 	printf("%d\n", cont);
     cont = ft_printf("El número es: %d\n", 42);
@@ -31,6 +33,8 @@ int main(void)
     cont = ft_printf("El número unsigned es: %u\n", 42);
 	printf("%d\n", cont);
     cont = ft_printf("El procentaje de 42 es: %d%%\n", 42);
+	printf("%d\n", cont);
+    cont = ft_printf("El puntero void en hex es: %p\n", ptr);
 	printf("%d\n\nPRINTF ORIGINAL:\n\n", cont);
 
 	cont = printf("String: %s\n", a);
@@ -48,6 +52,8 @@ int main(void)
     cont = printf("El número unsigned es: %u\n", 42);
 	printf("%d\n", cont);
     cont = printf("El procentaje de 42 es: %d%%\n", 42);
+	printf("%d\n", cont);
+    cont = printf("El puntero void en hex es: %p\n", ptr);
 	printf("%d\n", cont);
     return 0;
 }
