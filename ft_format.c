@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 19:07:09 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/22 18:37:16 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/23 13:05:22 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_format(const char c, va_list value)
 	}
 	else if (c == 'x' || c == 'X')
 	{
-		printed_chars = ft_putlnbr_base_x_X(c, va_arg(value, long long));
+		printed_chars = ft_putlnbr_base_x(c, va_arg(value, long long));
 	}
 	return (printed_chars);
 }
