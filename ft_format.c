@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 19:07:09 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/23 13:21:22 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/23 13:44:10 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,10 @@ int	ft_format(const char c, va_list value)
 	else if (c == 'u')
 	{
 		printed_chars = ft_putlnbr_base_x_u(c, va_arg(value, unsigned int));
+	}
+	else if (c == '%')
+	{
+		printed_chars = ft_putlchar('%');
 	}
 	return (printed_chars);
 }
