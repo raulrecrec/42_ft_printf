@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/09/23 17:08:58 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/23 13:21:03 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/23 14:20:37 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,6 @@ int		ft_numlen(int c);
 int		ft_putlnbr(int n);
 int		ft_putlstr(char *s);
 int		ft_putlchar(char c);
-int		ft_putlnbr_base_x_u(const char c, long long nbr);
+int		ft_putlnbr_base_xup(const char c, long long nbr);
 
 #endif
