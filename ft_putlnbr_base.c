@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:36:50 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/23 13:05:08 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/23 13:21:08 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,14 +36,16 @@ int	ft_putlnbr_base_mm(long long nbr, char *base, int printed_chars)
 	return (printed_chars);
 }
 
-int	ft_putlnbr_base_x(const char c, long long nbr)
+int	ft_putlnbr_base_x_u(const char c, long long nbr)
 {
 	int	print_crs;
 
 	print_crs = 0;
 	if (c == 'x')
 		print_crs = ft_putlnbr_base_mm(nbr, "0123456789abcdef", print_crs);
-	else
+	else if (c == 'X')
 		print_crs = ft_putlnbr_base_mm(nbr, "0123456789ABCDEF", print_crs);
+	else
+		print_crs = ft_putlnbr_base_mm(nbr, "0123456789", print_crs);
 	return (print_crs);
 }
