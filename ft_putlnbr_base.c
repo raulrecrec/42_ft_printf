@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:36:50 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/24 11:34:48 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/24 13:56:05 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,7 @@ int	ft_putlnbr_base_xxu(unsigned int nbr, char *base, int print_crs)
 	return (print_crs);
 }
 
-int	ft_putlnbr_base_p(long long nbr, char *base, int print_crs)
+int	ft_putlnbr_base_p(unsigned long long nbr, char *base, int print_crs)
 {
 	int		leng_base;
 	char	aux;
@@ -38,7 +38,7 @@ int	ft_putlnbr_base_p(long long nbr, char *base, int print_crs)
 	leng_base = 0;
 	while (base[leng_base] != '\0')
 		leng_base++;
-	if (nbr >= leng_base)
+	if (nbr >= (unsigned long long) leng_base)
 		print_crs = ft_putlnbr_base_p(nbr / leng_base, base, print_crs);
 	aux = base[nbr % leng_base];
 	print_crs++;
