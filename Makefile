@@ -1,5 +1,4 @@
 NAME	= libftprintf.a
-TEST    = test_program
 
 RM		= rm -f
 
@@ -22,9 +21,6 @@ all: $(NAME)
 
 $(NAME): $(OBJS)
 		ar rcs $(NAME) $(OBJS)
-
-$(TEST): all main.c
-	$(CC) $(CFLAGS) main.c -o $(TEST) $(NAME)
 
 %.o: %.c
 		$(CC) $(CFLAGS) -c $< -o $@
