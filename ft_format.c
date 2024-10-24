@@ -6,7 +6,7 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/15 19:07:09 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/23 16:28:36 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/24 11:33:31 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@ int	ft_format(const char c, va_list value)
 {
 	int	print_chars;
 
+	print_chars = 0;
 	if (c == 'c')
 		print_chars = ft_putlchar(va_arg(value, int));
 	else if (c == 's')
