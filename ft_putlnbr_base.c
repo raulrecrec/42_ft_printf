@@ -6,13 +6,13 @@
 /*   By: rexposit <rexposit@student.42madrid.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2024/10/22 17:36:50 by rexposit          #+#    #+#             */
-/*   Updated: 2024/10/23 16:35:55 by rexposit         ###   ########.fr       */
+/*   Updated: 2024/10/24 11:34:48 by rexposit         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int	ft_putlnbr_base_xxu(unsigned int nbr, char *base, int printed_chars)
+int	ft_putlnbr_base_xxu(unsigned int nbr, char *base, int print_crs)
 {
 	int			leng_base;
 	long long	nbr_cpy;
@@ -23,14 +23,14 @@ int	ft_putlnbr_base_xxu(unsigned int nbr, char *base, int printed_chars)
 	while (base[leng_base] != '\0')
 		leng_base++;
 	if (nbr_cpy >= leng_base)
-		printed_chars = ft_putlnbr_base_xxu(nbr_cpy / leng_base, base, printed_chars);
+		print_crs = ft_putlnbr_base_xxu(nbr_cpy / leng_base, base, print_crs);
 	aux = base[nbr_cpy % leng_base];
-	printed_chars++;
+	print_crs++;
 	write(1, &aux, 1);
-	return (printed_chars);
+	return (print_crs);
 }
 
-int	ft_putlnbr_base_p(long long nbr, char *base, int printed_chars)
+int	ft_putlnbr_base_p(long long nbr, char *base, int print_crs)
 {
 	int		leng_base;
 	char	aux;
@@ -39,11 +39,11 @@ int	ft_putlnbr_base_p(long long nbr, char *base, int printed_chars)
 	while (base[leng_base] != '\0')
 		leng_base++;
 	if (nbr >= leng_base)
-		printed_chars = ft_putlnbr_base_p(nbr / leng_base, base, printed_chars);
+		print_crs = ft_putlnbr_base_p(nbr / leng_base, base, print_crs);
 	aux = base[nbr % leng_base];
-	printed_chars++;
+	print_crs++;
 	write(1, &aux, 1);
-	return (printed_chars);
+	return (print_crs);
 }
 
 int	ft_putlnbr_base_xup(const char c, long long nbr)
